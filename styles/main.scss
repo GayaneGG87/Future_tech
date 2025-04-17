@@ -1,0 +1,59 @@
+@use 'fonts';
+@use 'utils';
+@use 'globals';
+@use 'variables';
+@use 'normalize';
+
+@use './blocks/logo';
+@use  './blocks/icon';
+@use   './blocks/button';
+@use   './blocks/badge';
+@use   './blocks/soc1al';
+@use   './blocks/metrics';
+@use   './blocks/team';
+@use   './blocks/advantage-card';
+@use   './blocks/resources-preview';
+@use   './blocks/burger-button';
+@use   './blocks/list';
+@use   './blocks/tile';
+@use   './blocks/tag';
+
+@use   './blocks/card';
+@use   './blocks/section';
+@use   './blocks/header';
+@use   './blocks/footer';
+@use   './blocks/hero';
+
+@use   './blocks/tabs';
+@use   './blocks/person-card';
+@use   './blocks/blog-actions';
+@use   './blocks/blog-card';
+@use   './blocks/button-action';
+@use   './blocks/download-info';
+
+@use   './blocks/bordered-grid';
+@use   './blocks/review-card';
+@use   './blocks/raiting-view';
+
+@use   './blocks/about-card';
+@use   './blocks/about';
+
+
+// main{
+//     & > :not(:last-child){
+//     display: none !important;
+//     }
+// }
+
+// footer, header.header{
+//     display: none !important;
+
+// }
+
+
+// for checking overflow-x scrolls
+// body{
+//     *{
+//         border: 2px solid red
+//     }
+// }

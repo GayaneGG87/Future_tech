@@ -1,0 +1,126 @@
+@use '../helpers/' as * ;
+
+.hero{
+    &__main{
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-template-areas: 
+       "body resources-preview"
+       " metrics resources-preview";
+
+       @include tablet{
+        display: flex;
+        flex-direction: column;
+       }
+    }
+    
+    &__body{
+        grid-area: body;
+        padding-top: rem(150);
+        padding-right: rem(50);
+        padding-bottom: rem(100);
+
+        @include laptop{
+            grid-area: body;
+            padding-top: rem(100);
+            padding-right: rem(40);
+            padding-bottom: rem(100);
+        }
+
+        @include tablet {
+            padding-block: rem(40) rem(30);
+            padding-right: 0;
+        }
+
+    }
+
+    &__subtitle{
+        @include fluid-text(30,18);
+        color: var(--color-dark-40);
+
+        &:not(:last-child){
+            margin-bottom: rem(20);
+
+            @include mobile{
+                margin-bottom: rem(14);
+            }
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family-bases);
+
+        &:not(:last-child){
+            margin-bottom: rem(14);
+            @include mobile{
+                margin-bottom: rem(10);
+            }
+        }
+        
+    }
+
+    &__resources-preview{
+        grid-area: resources-preview;   
+    }
+
+    &__metrics{
+        grid-area: metrics;
+        @include tablet-above{
+            border-top: var(--border);
+        }
+
+        @include tablet{
+            &::before{
+                width: 100vw;
+                right: calc( var(--container-padding-x)*-1);
+            
+            }
+        }
+    }
+
+    &__advantages{
+        --paddingX: #{rem(80)};
+        --paddingY: #{rem(50)};
+
+        border-block: var(--border);
+
+        @include laptop {
+            --paddingX: #{rem(40)};
+        }
+
+        @include tablet{
+            --paddingY: #{rem(30)};
+        }
+
+        &-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &-item{
+            padding-block: var(--paddingY);
+
+           
+            &:not(:last-child){
+                @include tablet-above{
+                    padding-right: var(--paddingX);
+                }
+                @include tablet{
+                    border-bottom: var(--border);
+                }
+            }
+    
+            &:not(:first-child){
+                @include tablet-above{
+                    border-left: var(--border);
+                    padding-left: var(--paddingX);
+
+                }
+            }
+        }
+    }
+}

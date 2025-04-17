@@ -1,0 +1,113 @@
+@use '../helpers/' as * ;
+
+.footer{
+    font-family: var(--font-family-accent);
+    color: var(--color-dark-40);
+
+    &__body{
+        padding-block: fluid(80, 40);
+    }
+
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: fluid(80, 20);
+
+        @include tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: rem(40);
+        }
+
+        @include mobile{
+            row-gap: rem(20);
+        }
+
+        &-column{
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(36, 16);
+
+            @include tablet {
+
+                &:last-child {
+
+                    display: grid;
+                    grid-column: -1/1;
+
+                    .footer__column-list {
+                        flex-direction: row;
+                        gap: 12px;
+                        flex-wrap: wrap;
+                     
+                    }
+                 }
+            }
+        }
+    }
+
+    &__column{
+        &-header-link{  
+            font-size: rem(20);
+            color: var(--color-light);
+            font-weight: 500;
+        }
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(18, 8);
+
+          
+        }
+
+        &-link{
+            display: inline-flex;
+            align-items: center;
+            column-gap: rem(8);
+
+            &.button{
+                padding: fluid(10, 8) fluid(16,14);
+            }
+        }
+    }
+
+    &__extra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 40px;
+        padding-block: fluid(40,24);
+        border-top: rem(1) solid var(--color-dark-40);
+
+        @include mobile{
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        &-list{
+            display: flex; 
+        }
+        &-item{
+            &:first-child{ 
+                padding-right: rem(11);
+                &::after{
+                    content:'';
+                    display: inline-flex;
+                    width: rem(2);
+                    height: rem(16);
+                    margin-left: 10px;    
+                    background-color: var(--color-dark-15);
+                }
+            }
+           
+        }
+        &-soc1al{
+
+            @include mobile {
+                order: -1;
+            }
+        }
+    }
+}

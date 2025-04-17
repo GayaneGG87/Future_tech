@@ -1,0 +1,15 @@
+@use '../helpers/' as * ;
+
+.badge{
+    display: inline-flex;
+    font-size: fluid(16, 12);
+    padding: fluid(4, 2)  fluid(14, 10);
+    color: var(--color-light);
+    border: rem(1) solid transparent;
+    background: 
+    linear-gradient(var(--color-dark-10),
+    var(--color-dark-10) ) padding-box, 
+    var(--gradient) border-box;
+    border-radius: rem(6);
+
+}

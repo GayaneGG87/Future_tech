@@ -1,0 +1,68 @@
+@use '../helpers/' as * ;
+
+.tabs{
+   
+    &__header{
+        padding-block: fluid(50, 20);
+        padding-inline: rem(10);
+        border-bottom: var(--border);
+
+        @include laptop {
+            overflow:auto;
+        }
+    }
+
+
+    &__buttons{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: rem(20);
+
+        @include laptop{
+            column-gap: rem(14);
+        }
+
+        @include tablet {
+            width: max-content;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+    }
+    &__button{
+        padding-block: fluid(30, 14);
+        font-size: rem(18);
+        border: var(--border);
+        border-radius: rem(8);
+        background-color: var(--transparent);
+        color: var(--color-gray-60);
+        transition-duration: var(--transition-duration);
+
+        @include hover{
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        @include laptop{
+            border-radius: rem(7);
+            font-size: rem(14);
+        }
+
+        &.is-active{
+            background-color: var(--color-dark-10);
+            color:var(--color-light);
+            font-weight: 500;
+            pointer-events: none;
+        }
+    }
+
+    &__content{
+        &:not(.is-active){
+            display: none;
+        }
+
+        &:focus-visible{
+            outline-offset: -1rem;
+        }
+    }
+
+}

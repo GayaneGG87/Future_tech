@@ -1,0 +1,42 @@
+@use '../helpers/' as * ;
+
+.section{
+    &__header{
+        background-color: var(--color-dark-10);
+        &-inner{
+            padding-block: fluid(120, 40); 
+        }
+        &-inner{
+            &:has(.section__link){
+                display: grid;
+                gap: rem(30);
+
+                @include mobile-above{
+                    grid-template-columns: 1fr auto;
+                    align-items: center;
+                }
+
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(16);
+
+            @include laptop{
+                row-gap: rem(10);
+            }
+        }
+
+        &-subtitle{
+            align-self: start;
+        }
+
+
+    }
+
+    &__body{
+        border-block: var(--border);
+    }
+   
+}

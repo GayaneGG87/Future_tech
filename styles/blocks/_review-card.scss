@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+
+.review-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(40);
+    max-width: rem(500);
+    margin-inline: auto;
+
+    @include laptop{
+        row-gap: rem(30);
+    }
+
+    &__author{
+        .person-card__image {
+            
+                --imageSize: #{rem(60)};
+        
+                @include square(var(--imageSize));
+        
+            @include laptop {
+                --imageSize: #{rem(50)};
+            }
+            
+        }
+
+    }
+
+    &__body{
+        padding: fluid(30, 20);
+        padding-top: fluid(50,40);
+        color: var(--color-light);
+        font-size: fluid(18, 14);
+        text-align: center;
+        position: relative;
+
+       @include laptop {
+        padding-top: rem(30);
+        } 
+
+    }
+
+    &__rating-view{
+        @include abs-center;
+        top: 0;
+    }
+
+}

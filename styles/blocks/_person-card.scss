@@ -1,0 +1,42 @@
+@use '../helpers/' as * ;
+
+.person-card{
+    display: flex;
+    align-items: center;
+    gap: fluid(16, 8);
+    font-family: var(--font-family-accent);
+
+    &__image{
+        width: rem(80);
+        border-radius: 50%;
+        background-color: var(--color-dark-15);
+
+        @include laptop{
+            width: rem(60);
+        }
+    }
+
+    &__body{
+        display: grid;
+        padding-right: rem(10);
+
+        @include laptop-above{
+            row-gap: rem(2);
+        }
+    }
+
+    &__name{
+        font-size: rem(16);
+        color: var(--color-light);
+        font-weight: 600;
+
+        @include laptop{
+            font-size: rem(18);
+        }
+    }
+
+    &__department{
+        font-size: fluid(18, 14);
+        font-weight: 400;
+    }
+}

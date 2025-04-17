@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.download-info{
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
+   column-gap: rem(50);
+  
+
+   @include laptop{
+    column-gap: rem(30);
+   }
+
+   &__body{
+      display: grid;
+      align-items: center;
+      row-gap: rem(4);
+
+      @include laptop {
+         row-gap: rem(2);
+      }
+   }
+
+   &__team{
+    padding: rem(10);
+    background-color: var(--color-dark);
+    border-radius: rem(15);
+    
+
+    @include laptop{
+      padding: rem(8);
+    }
+
+    .person{
+      border-width: rem(2);
+      // background-color: var(--color-dark-15);
+      
+      @include laptop{
+         width: rem(40);
+         border-width: rem(1);
+      }
+    }
+   }
+}

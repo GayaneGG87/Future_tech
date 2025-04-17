@@ -1,0 +1,12 @@
+@use '../helpers/' as * ;
+
+.blog-actions{
+    &__list{
+        display: flex;
+        column-gap: rem(10);
+
+        @include laptop {
+            column-gap: rem(8);
+        }
+    }
+}

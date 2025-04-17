@@ -1,0 +1,59 @@
+@use '../helpers/' as * ;
+
+.resources-preview{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: rem(30);
+    padding-left: rem(80);
+    padding-bottom: rem(80);
+    font-family: "Inter", sans-serif;
+    border-left: var(--border);
+    background: url("./../../images/hero/hero-bg.png") 0 0 / cover no-repeat;
+
+    @include laptop {
+        padding-left: rem(50);
+        padding-bottom: rem(50);
+        gap: rem(20);
+
+    }
+
+    @include tablet{
+        width: 100vw;
+        margin-left: calc(var(--container-padding-x)*-1);
+        border-left: none;
+        background-size: contain;
+        padding: rem(100) rem(40) rem(40);
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: rem(14);
+
+        @include laptop {
+            gap: rem(6);
+        }
+        @include mobile {
+            gap: rem(4);
+        }
+    }
+    &__button{
+        @include mobile-s{
+        width: 100%;
+        }
+    }
+    &__team{
+        padding: rem(10);
+        border-radius: 50px;
+        border: rem(1) solid var(--color-dark-15);
+        background-color: var(--color-dark-10);
+    
+        @include laptop{
+            
+            padding: rem(8);
+    
+        }
+    }
+}
