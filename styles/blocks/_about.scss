@@ -2,6 +2,7 @@
 
 .about{
     background-color: var(--color-dark-10);
+    font-family: var(--font-family-accent);
     &__inner{
         display: grid;
         row-gap: fluid(100, 40 );

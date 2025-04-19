@@ -2,17 +2,51 @@
 
 .bordered-grid{
     --columns: 1;
-    --paddingSizeY: fluid(80, 40);
+    --paddingSizeY: #{fluid(80, 40)};
 
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
-    padding-inline: var(--paddingSizeX);
-    padding-block: var(--paddingSizeY);
 
     &__2-cols{
         --columns: 2;
-        --paddingSizeX: fluid(80, 0);
+        --paddingSizeX: #{rem(80)};
+        .bordered-grid__item {
+            padding-block: var(--paddingSizeY);
+        }
 
+        @include laptop {
+            --paddingSizeX: #{rem(50)};
+        }
+
+        @include mobile-above {
+            .bordered-grid__item {
+                padding-block: var(--paddingSizeY);
+
+              &:nth-child(odd) {
+                padding-right: var(--paddingSizeX);
+                border-right: var(--border);
+              }
+      
+              &:nth-child(even) {
+                @include full-vw-centered-line(
+                    bottom,
+                    auto,
+                    100%,
+                    50%
+                );
+                padding-left: var( --paddingSizeY);
+              }
+            }
+        }
+
+        @include mobile{
+            --columns: 1;
+            .bordered-grid__item{
+                &:not(:last-child){
+                    border-bottom: var(--border);
+                }
+            }
+        }
     }
 
     &__3-cols{
@@ -64,7 +98,4 @@
         }
         
     }
-
-
-
 }
