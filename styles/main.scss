@@ -4,6 +4,7 @@
 @use 'variables';
 @use 'normalize';
 
+@use   './blocks/expandable-content';
 @use './blocks/logo';
 @use  './blocks/icon';
 @use   './blocks/button';
@@ -46,6 +47,8 @@
 @use   './blocks/video-player';
 @use   './blocks/video-card';
 
+@use   './blocks/table-of-contents';
+@use   './blocks/blog-details';
 
 // main{
 //     & > :not(:last-child){

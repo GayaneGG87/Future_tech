@@ -1,9 +1,4 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 7 | @use   './blocks/expandable-content';
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   styles\main.scss 7:1  root stylesheet */
+
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
