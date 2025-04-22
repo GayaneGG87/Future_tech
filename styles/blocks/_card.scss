@@ -101,6 +101,18 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
+        &--3-cols-alt {
+            grid-template-columns: repeat(3, 1fr);
+            gap: fluid(50, 20) fluid(20);
+
+            @include laptop{
+                column-gap: rem(16);
+            }
+
+            @include mobile{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
         &--2-cols-alt{
                 @include laptop{
@@ -115,8 +127,6 @@
         }
     }
 
-
- 
     &__cell{
         row-gap: rem(4);
 
@@ -126,7 +136,11 @@
 
         &-wide{
             grid-column: -1/1;
-            background-attachment: fixed;
+        }
+        &-wide-on-mobile-s{
+           @include mobile-s{
+            grid-column: -1/1;
+           }
         }
 
         &-image{
@@ -154,6 +168,20 @@
             grid-template-areas:
             " subtitle link"
             " description link";
+
+            @include mobile{
+                row-gap: rem(10);
+            }
+        }
+
+        &:not(.tile){
+            @include mobile-s{
+                grid-template: initial;
+
+                .card__cell-link {
+                    grid-area: initial;
+                  }
+            }
         }
 
         &-subtitle{
