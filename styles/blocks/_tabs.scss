@@ -27,6 +27,32 @@
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
         }
+
+        &-compact{
+            display: flex;
+            column-gap: rem(10);
+            background-color: var(--color-dark);
+            border-radius: rem(8);
+            border: var(--border);
+            padding: rem(10);
+            .tabs__button{
+                padding: rem(18) rem(38);
+
+                @include laptop {
+                    padding: rem(14) rem(24);
+                }
+
+                @include tablet {
+                    padding: rem(14) rem(28);
+                }
+
+                &.is-active{
+                    background-color: var(--color-dark-15);
+                }
+            }
+
+           
+        }
     }
     &__button{
         padding-block: fluid(30, 14);

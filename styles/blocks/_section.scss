@@ -7,7 +7,7 @@
             padding-block: fluid(120, 40); 
         }
         &-inner{
-            &:has(.section__link){
+            &:has(.section__actions){
                 display: grid;
                 gap: rem(30);
 
@@ -38,6 +38,12 @@
     &__body{
         border-block: var(--border);
     }
+
+    &__actions,
+    &__link{
+        width: 100%;
+    }
+    
    &__link{
     max-width: rem(360);
    }
