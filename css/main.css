@@ -1696,6 +1696,7 @@ svg * {
 .bordered-grid__3-cols {
   --columns: 3;
   --paddingSizeX: 3.125rem;
+  column-gap: calc(var(--paddingSizeX) * 2);
 }
 .bordered-grid__3-cols .bordered-grid__item {
   padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
@@ -1710,8 +1711,16 @@ svg * {
     align-items: center;
   }
   .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-2), .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-1) {
-    padding-right: var(--paddingSizeX);
-    border-right: var(--border);
+    position: relative;
+  }
+  .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-2)::after, .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--paddingSizeX));
+    width: 0.0625rem;
+    height: 100%;
+    background-color: var(--color-dark-15);
   }
   .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-1) {
     position: relative;
@@ -1726,9 +1735,6 @@ svg * {
     width: 99.2vw;
     height: 0.0625rem;
     background-color: var(--color-dark-15);
-  }
-  .bordered-grid__3-cols .bordered-grid__item:nth-child(3n-1), .bordered-grid__3-cols .bordered-grid__item:nth-child(3n) {
-    padding-left: var(--paddingSizeX);
   }
 }
 @media (width <= 63.99875rem) {

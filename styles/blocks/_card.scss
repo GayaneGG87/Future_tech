@@ -47,10 +47,17 @@
             width: fluid(80, 50);
         }
 
-        &__info{
+        &-info{
             display: flex;
             flex-direction: column;
             row-gap: fluid(16, 6);
+
+            &:has(.card__rating-view){
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 1rem;
+            }
 
         }
         &__description{
@@ -80,6 +87,18 @@
 
             @include mobile-above{
                 grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &--3-cols {
+            gap: fluid(50, 20) fluid(20);
+
+            @include laptop{
+                column-gap: rem(16);
+            }
+
+            @include mobile-above{
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
