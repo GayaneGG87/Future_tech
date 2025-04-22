@@ -52,6 +52,9 @@
     &__3-cols{
         --columns: 3;
         --paddingSizeX: #{rem(50)};
+
+        column-gap: calc(var(--paddingSizeX)*2);
+
         .bordered-grid__item{
             padding-block: fluid(80, 40);
 
@@ -70,8 +73,18 @@
     
                &:nth-child(3n-2),
                &:nth-child(3n-1){
-                padding-right: var(--paddingSizeX);
-                border-right: var(--border);
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: calc(100% + var(--paddingSizeX));
+                  width: rem(1);
+                  height: 100%;
+                  background-color: var(--color-dark-15);
+                }
+              
                }
     
                &:nth-child(3n-1){
@@ -80,10 +93,7 @@
     
                 // Choosing third and second columns paddings
     
-               &:nth-child(3n-1),
-               &:nth-child(3n){
-                padding-left: var(--paddingSizeX);
-               }
+              
             }
      
         }
