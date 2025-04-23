@@ -32,6 +32,8 @@
         var(--color-accent) 136%
     );
 
+    --shadow: 0 0 0 #{rem(3)} #191919;
+
     @include laptop{
         --container-width:#{rem(1280)};
     }

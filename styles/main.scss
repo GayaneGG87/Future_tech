@@ -50,24 +50,13 @@
 @use   './blocks/table-of-contents';
 @use   './blocks/blog-details';
 
-@use   './blocks/report-card';
+@use './blocks/rep-card';
 
-
-// main{
-//     & > :not(:last-child){
-//     display: none !important;
-//     }
-// }
-
-// footer, header.header{
-//     display: none !important;
-
-// }
-
-
-// for checking overflow-x scrolls
-// body{
-//     *{
-//         border: 2px solid red
-//     }
-// }
+@use   './blocks/contacts-card';
+@use   './blocks/field';
+@use   './blocks/select';
+@use   './blocks/checkbox';
+@use   './blocks/feedback-form';
+@use   './blocks/accardion';
+@use   './blocks/accardion-group';
+@use   './blocks/contacts';
