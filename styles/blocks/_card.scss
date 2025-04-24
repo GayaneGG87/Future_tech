@@ -38,8 +38,10 @@
 
         &-main{
             display: grid;
-            justify-content: start;
             gap: fluid(50, 24);
+            &:not(:has(.card__rating-view)){
+                justify-content: start;
+            }
         }
        
 

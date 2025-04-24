@@ -23,7 +23,7 @@
                 padding-block: var(--itemPaddingY);
 
               &:nth-child(odd) {
-                padding-right: var(--paddingSizeX);
+                padding-right: var( --itemPaddingX);
                 border-right: var(--border);
               }
       

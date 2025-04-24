@@ -35,6 +35,7 @@
             border-radius: rem(8);
             border: var(--border);
             padding: rem(10);
+
             .tabs__button{
                 padding: rem(18) rem(38);
 
@@ -43,7 +44,7 @@
                 }
 
                 @include tablet {
-                    padding: rem(14) rem(28);
+                    padding: rem(14) rem(14);
                 }
 
                 &.is-active{
