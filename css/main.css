@@ -1006,8 +1006,10 @@ svg * {
 }
 .card__preview-main {
   display: grid;
-  justify-content: start;
   gap: clamp(1.5rem, 1.0857843137rem + 1.6993464052vw, 3.125rem);
+}
+.card__preview-main:not(:has(.card__rating-view)) {
+  justify-content: start;
 }
 .card__preview-icon {
   width: clamp(3.125rem, 2.6470588235rem + 1.9607843137vw, 5rem);
@@ -1552,7 +1554,7 @@ svg * {
 }
 @media (width <= 63.99875rem) {
   .tabs__buttons-compact .tabs__button {
-    padding: 0.875rem 1.75rem;
+    padding: 0.875rem 0.875rem;
   }
 }
 .tabs__buttons-compact .tabs__button.is-active {
@@ -1797,7 +1799,7 @@ svg * {
     padding-block: var(--itemPaddingY);
   }
   .bordered-grid__2-cols .bordered-grid__item:nth-child(odd) {
-    padding-right: var(--paddingSizeX);
+    padding-right: var(--itemPaddingX);
     border-right: var(--border);
   }
   .bordered-grid__2-cols .bordered-grid__item:nth-child(even) {
@@ -1811,7 +1813,7 @@ svg * {
     right: 100%;
     bottom: 0;
     translate: 50%;
-    width: 99.2vw;
+    width: 99vw;
     height: 0.0625rem;
     background-color: var(--color-dark-15);
   }
@@ -1863,7 +1865,7 @@ svg * {
     right: auto;
     bottom: 0;
     translate: -50%;
-    width: 99.2vw;
+    width: 99vw;
     height: 0.0625rem;
     background-color: var(--color-dark-15);
   }
@@ -1965,6 +1967,9 @@ svg * {
   left: 50%;
   translate: -50% -50%;
   top: 0;
+}
+.review-card .person-card__image {
+  background-color: var(--color-light);
 }
 
 .raiting-view {
@@ -2206,7 +2211,6 @@ svg * {
   grid-template-columns: repeat(auto-fit, minmax(22.375rem, 1fr));
   gap: 1.875rem;
   justify-content: center;
-  border-bottom: var(--border);
 }
 
 .news-card {
@@ -2461,7 +2465,7 @@ svg * {
     right: auto;
     bottom: 0;
     translate: -50%;
-    width: 99.2vw;
+    width: 99vw;
     height: 0.0625rem;
     background-color: var(--color-dark-15);
   }
