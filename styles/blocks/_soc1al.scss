@@ -51,10 +51,6 @@
         }
 
         @include square(var(--size));
-
-        @include mobile{
-            --size: #{rem(20)};
-        }
     }
     &-item{
         display: flex;

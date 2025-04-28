@@ -675,11 +675,6 @@ svg * {
     color: var(--color-accent);
   }
 }
-@media (width <= 47.99875rem) {
-  .soc1al-link {
-    --size: 1.25rem;
-  }
-}
 .soc1al-item {
   display: flex;
 }
