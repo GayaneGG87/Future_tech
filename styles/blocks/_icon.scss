@@ -18,7 +18,7 @@
     }
     &--yellow-arrow{
         &::after{
-            background-image: url('../../icons/yellow-top-right-arrow.svg');
+            background-image: url('./../icons/yellow-top-right-arrow.svg');
         }
 
         @include laptop{
@@ -28,7 +28,7 @@
 
     &--yellow-eye{
         &::after{
-            background-image: url('../../icons/resources/3.svg');
+            background-image: url('./../icons/resources/3.svg');
         }
 
         @include laptop{
@@ -38,7 +38,7 @@
 
     &--gray-arrow-down{
         &::after{
-            background-image: url('../../icons/gray-bottom-arrow.svg');
+            background-image: url('./../icons/gray-bottom-arrow.svg');
         }
 
         @include laptop{

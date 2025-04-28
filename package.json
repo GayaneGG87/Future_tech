@@ -5,12 +5,20 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "default": "index.html",
+  "source": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass styles/main.scss css/main.css --watch"
+    "sass-watch": "sass styles/main.scss styles/main.css --watch",
+    "build": "parcel build"
   },
   "dependencies": {
     "sass": "^1.80.6"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.14.4",
+    "@parcel/transformer-webmanifest": "^2.14.4",
+    "parcel": "^2.14.4",
+    "svgo": "^3.3.2"
   }
 }
