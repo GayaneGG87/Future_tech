@@ -99,7 +99,7 @@ a{
 
 a,
 button{
-    &[area-label]{
+    &[aria-label]{
         position: relative;
         
         &::before{

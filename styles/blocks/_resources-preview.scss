@@ -10,7 +10,7 @@
     padding-bottom: rem(80);
     font-family: "Inter", sans-serif;
     border-left: var(--border);
-    background: url("./../../images/hero/hero-bg.png") 0 0 / cover no-repeat;
+    background: url("./../images/hero/hero-bg.png") 0 0 / cover no-repeat;
 
     @include laptop {
         padding-left: rem(50);
