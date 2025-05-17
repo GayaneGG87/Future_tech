@@ -230,12 +230,12 @@ a[class] {
   transition-duration: 0s !important;
 }
 
-a[area-label],
-button[area-label] {
+a[aria-label],
+button[aria-label] {
   position: relative;
 }
-a[area-label]::before,
-button[area-label]::before {
+a[aria-label]::before,
+button[aria-label]::before {
   position: absolute;
   top: 50%;
   left: 50%;
